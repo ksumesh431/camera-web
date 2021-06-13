@@ -57,8 +57,11 @@ video {
   align-items: center;
   z-index: 4;
 }
+.rec {
+  top: 20rem;
+}
 .cap {
-  top: 53%;
+  top: 26rem;
 }
 .record-video,
 .capture {
@@ -107,7 +110,6 @@ video {
   position: fixed;
   height: 65vh;
   width: 6rem;
-
   top: 6.5rem;
   left: 5rem;
   z-index: 4;
@@ -147,7 +149,6 @@ video {
   position: fixed;
   width: 5rem;
   height: 5rem;
-  top: 38rem;
   background-color: white;
   border: 1px solid red;
   right: 5rem;
@@ -155,4 +156,5 @@ video {
   border-radius: 50%;
   text-align: center;
   padding-top: 1.8rem;
+  top: 40rem;
 }
