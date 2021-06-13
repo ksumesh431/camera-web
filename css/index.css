@@ -158,3 +158,9 @@ video {
   padding-top: 1.8rem;
   top: 40rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .filter-container {
+    visibility: hidden;
+  }
+}
