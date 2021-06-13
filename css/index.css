@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+.video-container {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  /* use transform to flip video preview */
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+.zoom {
+  position: fixed;
+  z-index: 4;
+  height: 6rem;
+  width: 3rem;
+  background-color: rgba(255, 255, 255, 0.548);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  right: 6rem;
+  top: 4rem;
+}
+.icon-container {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+  z-index: 4;
+}
+.fa-plus {
+  font-size: 2rem;
+}
+.fa-minus {
+  font-size: 2rem;
+}
+.btnParent {
+  position: fixed;
+  border: 0.5rem solid white;
+  bottom: 23rem;
+  right: 5rem;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.cap {
+  top: 53%;
+}
+.record-video,
+.capture {
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.record-video:hover {
+  animation: zoom-in 0.4s ease;
+  animation-fill-mode: forwards;
+}
+.record-video {
+  background-color: red;
+}
+
+.internalAnim {
+  animation: recording 1s ease infinite;
+}
+.internalAnimForCapture {
+  animation: recording 0.5s ease;
+}
+@keyframes recording {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoom-in {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.filter-container {
+  position: fixed;
+  height: 65vh;
+  width: 6rem;
+
+  top: 6.5rem;
+  left: 5rem;
+  z-index: 4;
+}
+.filter {
+  height: 16%;
+  background-image: url("https://picsum.photos/id/237/200/300");
+  background-blend-mode: color-burn;
+  background-size: cover;
+  cursor: pointer;
+}
+.timing {
+  display: none;
+  position: fixed;
+  color: white;
+  bottom: 5rem;
+  left: 5rem;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  z-index: 4;
+}
+.timing-active {
+  display: block;
+}
+.ui-filter {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+}
+.ui-filter-active {
+  display: block;
+}
+.gallery {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  top: 38rem;
+  background-color: white;
+  border: 1px solid red;
+  right: 5rem;
+  z-index: 5;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 1.8rem;
+}

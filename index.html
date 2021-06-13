@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="filter-container">
+        <div style="background-color: #f4a2613d;" class="filter"></div>
+        <div style="background-color: #e85d0440;" class="filter"></div>
+        <div style="background-color: #ad5d6d4b;" class="filter"></div>
+        <div style="background-color: #008cff38;" class="filter"></div>
+        <div style="background-color: #00d1033d;" class="filter"></div>
+        <div class="filter"></div>
+    </div>
+
+    <div class="ui-filter"></div>
+    <div class="timing">00:00:00</div>
+    <div class="zoom">
+        <div class="icon-container" id="plus-container">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="icon-container" id="minus-container">
+            <i class="fas fa-minus"></i>
+        </div>
+    </div>
+    <div class="video-container">
+        <video muted autoplay id="video">
+        </video>
+    </div>
+    <div class="btnParent rec">
+        <button id="record-video" class="record-video">
+        </button>
+    </div>
+    <div class="btnParent cap">
+        <button id="capture" class="capture"></button>
+    </div>
+    <div class="gallery">
+        Gallery
+    </div>
+
+
+    <script src="indexedDB.js" defer ></script>
+    <script src="script.js" ></script>
+    
+</body>
+
+</html>
